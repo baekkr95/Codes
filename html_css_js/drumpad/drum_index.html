@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Launchpad</title>
+    <meta charset="utf-8" />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="pad">
+      <img src="images/pad.png" width="700" height="570">
+      <button id="play-btn">
+        <img src="images/play.png" width="50" height="50">
+      </button>
+      <button id="stop-btn">
+        <img src="images/stop.png" width="50" height="50">
+      </button>
+
+      <div class="cell-container">
+        <div class="cell green" id="cell1">
+          <div class="key">1</div>
+          <div class="instrument">Kick</div>
+        </div>
+
+        <div class="cell blue" id="cell2">
+          <div class="key">2</div>
+          <div class="instrument">Closed<br>Hi-hat</div>
+        </div>
+
+        <div class="cell blue" id="cell3">
+          <div class="key">3</div>
+          <div class="instrument">Open<br>Hi-hat</div>
+        </div>
+
+        <div class="cell red" id="cell4">
+          <div class="key">4</div>
+          <div class="instrument">Clap</div>
+        </div>
+
+        <div class="cell red" id="cell5">
+          <div class="key">5</div>
+          <div class="instrument">Snap</div>
+        </div>
+
+        <div class="cell blue" id="cell6">
+          <div class="key">6</div>
+          <div class="instrument">Crash</div>
+        </div>
+
+        <div class="cell green" id="cell7">
+          <div class="key">7</div>
+          <div class="instrument">Tom 1</div>
+        </div>
+
+        <div class="cell green" id="cell8">
+          <div class="key">8</div>
+          <div class="instrument">Tom 2</div>
+        </div>
+
+        <div class="cell blue" id="cell9">
+          <div class="key">9</div>
+          <div class="instrument">Tambourine</div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script>
+      // 여기에 코드를 입력하세요.
+        var audioFile = new Audio('audio/loop.mp3');
+        
+        var audioFiles = [];
+        audioFiles.push(new Audio('audio/01_kick_drum.wav'));
+        audioFiles.push(new Audio('audio/02_closed_hihat.wav'));
+        audioFiles.push(new Audio('audio/03_open_hihat.wav'));
+        audioFiles.push(new Audio('audio/04_clap.wav'));
+        audioFiles.push(new Audio('audio/05_snap.wav'));
+        audioFiles.push(new Audio('audio/06_crash.wav'));
+        audioFiles.push(new Audio('audio/07_tom1.wav'));
+        audioFiles.push(new Audio('audio/08_tom2.wav'));
+        audioFiles.push(new Audio('audio/09_tambourine.wav'));
+        
+        
+        
+        function playMusic() {
+            audioFile.play();
+        }
+        function stopMusic() {
+            audioFile.pause();
+            audioFile.currentTime = 0;
+        }
+        
+        function keydownEvent(event) {
+            if (Number(event['key']) >= 1 && Number(event.key) <= 9) {
+                $('#cell'+ event.key).addClass('playing');
+                var sound = audioFiles[Number(event.key) - 1];
+                sound.currentTime = 0;
+                sound.play();
+            }
+        }
+        function keyupEvent(event) {
+            $('#cell' + event.key).removeClass('playing');
+        }
+        
+        
+        
+        $('#play-btn').on('click', playMusic);
+        $('#stop-btn').on('click', stopMusic);
+        $(document).on('keydown', keydownEvent);
+        $(document).on('keyup', keyupEvent);
+    </script>
+  </body>
+</html>

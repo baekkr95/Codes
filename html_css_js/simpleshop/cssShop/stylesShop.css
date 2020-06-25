@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 992px;
+  font-family: "Helvetica";
+}
+.navbar {
+    height: 60px;
+    padding: 0px 30px;
+    background-color: white;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+li {
+    list-style: none;
+    float: right;
+    line-height: 60px;
+}
+li a{
+    text-decoration: none;
+    color: #545454;
+    font-size: 13px;
+    margin-left: 30px;
+}
+
+.helper{
+    display: inline-block;
+    height: 60px;
+    vertical-align: middle;
+}
+.logo {
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.head {
+    
+}
+.head_pic {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 60px;
+}
+.head_main {
+    font-size: 24px;
+    color: #545454;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.products {
+    width: 715px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 120px;
+}
+.products a {
+    text-decoration: none;
+    color: #545454
+}
+.each_prod {
+    width: 225px;
+    float: left;
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 80px;
+}
+
+.three, .six, .nine {
+    margin-right: 0px;
+}
+.seven, .eight, .nine {
+    margin-bottom: 0px;
+}
+
+.products img {
+    width: 225px;
+    height: 225px;
+    margin-bottom: 20px;
+}
+h1 {
+    font-size: 16px;
+}
+p {
+    font-size: 16px;
+    margin-top:4px;
+}
+.clearfix {
+    clear: left;
+}
+.bottom_logo{
+    text-align: center;
+    margin-bottom: 80px;
+    width: 100%;
+    height: 30px;
+    
+}
+.insta {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.fb, .twit, .insta {
+    height: 100%;
+}

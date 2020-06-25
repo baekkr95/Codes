@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Furniture Shop</title>
+    <meta charset="utf-8" />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a href="#" id="logo">
+        <img src="images/logo.png" width="165">
+      </a>
+
+      <ul id="menu">
+        <li><a href="#">SHOP</a></li>
+        <li><a href="#">CART</a></li>
+        <li><a href="#">LOGIN</a></li>
+      </ul>
+    </div>
+
+    <div class="hero-header">
+      <div class="info">
+        <h1>블랙 프라이데이 슈퍼 세일</h1>
+        <h2>최대 50% 할인의 혜택을 받아보세요!</h2>
+        <button id="popup-trigger">쿠폰 받기</button>
+      </div>
+    </div>
+
+    <div id="popup" role="alert">
+      <div id="popup-container">
+        <h3>다운 완료!</h3>
+        <p>내 쿠폰함에서 확인하세요!</p>
+
+        <button id="close-btn">확인</button>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script>
+      // 코드를 입력하세요.
+      $('#popup-trigger').on('click', function(){
+        $('#popup').show();
+      });
+      $('#close-btn').on('click', function(){
+        $('#popup').hide();
+      });
+      $(document).on('keydown', function(event){
+        if(event.key == 'Escape') {
+          $('#popup').hide();
+        }
+      });
+
+    </script>
+  </body>
+</html>

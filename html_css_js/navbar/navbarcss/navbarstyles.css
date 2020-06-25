@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+#navbar {
+  padding: 0 20px;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.50);
+  height: 60px;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+img{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+}
+#logo {
+  font-family: serif;
+  float: left;
+
+  /* 이건 지우세요 */
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none;
+    float: right;
+    height: 60px;
+    line-height: 60px;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 10px;
+}
+.login:hover{
+    background-color: #eeeeee;
+}
+
+
+.hero-header {
+  background-image: url("../images/hero_image.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 670px;
+  text-align: center;
+  line-height: 670px;
+}
+
+.hero-header .info {
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle;
+  /* 이건 지우세요 */
+}
+
+.hero-header .info h1 {
+  font-size: 36px;
+  margin: 0;
+  margin-bottom: 13px;
+  color: white;
+  font-weight: 400;
+}
+
+.hero-header .info h2 {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 60px;
+  color: white;
+  font-weight: 400;
+}
+
+.hero-header .info a {
+  font-size: 14px;
+  background-color: white;
+  color: #464273;
+  padding: 10px 40px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+

@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica";
+  background-color: #090910;
+}
+
+.pad {
+  width: 700px;
+  height: 570px;
+  margin: 100px auto;
+  position: relative;
+}
+
+.pad #play-btn {
+  position: absolute;
+  top: 70px;
+  right: 50px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.pad #stop-btn {
+  position: absolute;
+  top: 140px;
+  right: 50px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.cell-container {
+  width: 360px;
+  height: 360px;
+  left: 105px;
+  top: 100px;
+  position: absolute;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  color: #4A4A4A;
+  font-size: 16px;
+  float: left;
+  margin: 10px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.cell .key {
+  border: 2px solid #4A4A4A;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 8px auto;
+  line-height: 40px;
+  font-weight: 500;
+}
+
+.cell .instrument {
+  width: 80px;
+  white-space: nowrap;
+  margin: 0 auto;
+  font-weight: 500;
+}
+
+.cell.green {
+  background-color: #87E682;
+}
+
+.cell.blue {
+  background-color: #2DBAF2;
+}
+
+.cell.red {
+  background-color: #FB718C;
+}
+
+.cell.green.playing {
+  background-color: rgba(135, 230, 130, 0.2);
+  color: #87E682;
+  border: 2px solid #87E682;
+}
+
+.cell.green.playing .key {
+  border: 2px solid #87E682;
+}
+
+.cell.blue.playing {
+  background-color: rgba(45, 186, 242, 0.2);
+  color: #2DBAF2;
+  border: 2px solid #2DBAF2;
+}
+
+.cell.blue.playing .key {
+  border: 2px solid #2DBAF2;
+}
+
+.cell.red.playing {
+  background-color: rgba(251, 113, 140, 0.2);
+  color: #FB718C;
+  border: 2px solid #FB718C;
+}
+
+.cell.red.playing .key {
+  border: 2px solid #FB718C;
+}

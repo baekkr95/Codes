@@ -1,4 +1,5 @@
 # Naver_Boostcamp 지원서 포트폴리오
-1. 파이썬
-2. R 데이터분석
-3. HTML/CSS/JS
+1. 파이썬 - (기본문법, 크롤링, PyQt, Tkinter, 데이터)
+2. R 데이터분석 - (R, 통계, 데이터분석)
+3. HTML/CSS/JS - (기본 코드 연습)
+4. C Language - (자료구조, 알고리즘 연습) 
